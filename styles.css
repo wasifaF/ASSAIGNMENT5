@@ -1,0 +1,80 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+.input {
+  width: 100%;
+  border: 1px solid #ddd;
+  padding: 8px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+}
+
+.btn-primary {
+  width: 100%;
+  background: green;
+  color: white;
+  padding: 8px;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.btn-primary:hover {
+  background: #013223;
+}
+
+.icon-box {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background: #f3f4f6;
+  padding: 5px 10px;
+  border-radius: 20px;
+}
+
+.icon-box img {
+  width: 18px;
+}
+
+
+/*  MOBILE (max 640px) */
+@media (max-width: 640px) {
+
+  /* Main layout */
+  .grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Cards */
+  #cards {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Navbar */
+  .bg-white.flex {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  /* Header text */
+  h2 {
+    font-size: 16px;
+  }
+
+  p {
+    font-size: 12px;
+  }
+
+}
+
+
+/* TABLET (641px – 1024px) */
+@media (min-width: 641px) and (max-width: 1024px) {
+
+  /* Cards */
+  #cards {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+}

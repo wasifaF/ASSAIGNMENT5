@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Emergency Service</title>
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="./styles.css">
+ 
+</head>
+
+<body class="bg-gray-100">
+
+<!-- LOGIN -->
+<div id="loginPage" class="flex items-center justify-center h-screen">
+  <div class="bg-white p-8 rounded-xl shadow w-80 text-center">
+    <img src="./B12-A5-Emergency-Hotline/assets/logo.png" class="w-16 mx-auto mb-3">
+    <h1 class="text-xl font-bold">Emergency Service</h1>
+    <p class="text-gray-500 mb-4">Sign in to continue</p>
+
+    <input id="username" type="text" placeholder="Username" class="input">
+    <input id="password" type="password" placeholder="Password" class="input">
+
+    <button onclick="login()" class="btn-primary mt-2">Sign In</button>
+
+    <p class="text-xs text-gray-400 mt-3">admin / admin123</p>
+  </div>
+</div>
+
+<!-- MAIN -->
+<div id="mainPage" class="hidden">
+
+  <!-- NAVBAR -->
+  <div class="bg-white flex justify-between items-center p-4 shadow">
+    <div class="flex items-center gap-2">
+      <img src="./B12-A5-Emergency-Hotline/assets/logo-dark.png" class="w-8">
+      <h1 class="font-bold">Emergency Service</h1>
+    </div>
+
+    <div class="flex items-center gap-4">
+      <div class="icon-box">
+        <img src="./B12-A5-Emergency-Hotline/assets/heart.png">
+        <span id="favCount">0</span>
+      </div>
+
+      <div class="icon-box">
+        <img src="./B12-A5-Emergency-Hotline/assets/coin.png">
+        <span id="coinCount">100</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <div class="bg-green-700 text-white text-center py-6">
+    <h2 class="text-xl font-semibold">Emergency Service Directory</h2>
+    <p class="text-sm">Government Emergency Services at Your Fingertip – A Project by  Government of the People’s Republic of Bangladesh</p>
+  </div>
+
+  <!-- CONTENT -->
+  <div class="grid md:grid-cols-4 gap-4 p-4">
+
+    <!-- CARDS -->
+    <div id="cards" class="md:col-span-3 grid sm:grid-cols-2 lg:grid-cols-3 gap-4"></div>
+
+    <!-- CALL HISTORY -->
+    <div class="bg-white p-4 rounded shadow">
+      <div class="flex justify-between mb-2">
+        <h3 class="font-bold">Call History</h3>
+        <button onclick="clearHistory()" class="text-green-600 text-sm">Clear</button>
+      </div>
+      <ul id="history" class="text-sm text-gray-600 space-y-1"></ul>
+    </div>
+
+  </div>
+
+</div>
+
+<script src="./script.js">
+
+</script>
+</body>
+</html>
